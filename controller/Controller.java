@@ -13,4 +13,8 @@ public class Controller {
     public void displayText(ActionEvent action) {
         greeting.setText(Model.getGreeting());
     }
+
+    public void addToOrder(ActionEvent action){
+        
+    }
 }
