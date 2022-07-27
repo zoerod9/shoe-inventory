@@ -5,7 +5,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import model.Model;
 
-public class Controller {
+public class itemDetailsScreenController {
 
     @FXML
     Label greeting;
