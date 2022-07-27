@@ -19,12 +19,12 @@
             </ButtonBar>
             <ButtonBar nodeOrientation="LEFT_TO_RIGHT" prefHeight="58.0" prefWidth="186.0">
               <buttons>
-                <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="Order" translateX="-60.0" />
+                <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#switchToOrderScreen" text="My Order" translateX="-60.0" />
               </buttons>
             </ButtonBar>
             <ButtonBar nodeOrientation="LEFT_TO_RIGHT" prefHeight="58.0" prefWidth="186.0">
                <buttons>
-                  <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="Advanced Search" translateX="-40.0" />
+                  <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#switchToSearchScreen" text="Advanced Search" translateX="-40.0" />
                </buttons>
             </ButtonBar>
          </children>
