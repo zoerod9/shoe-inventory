@@ -84,5 +84,11 @@ public class Shoes {
 	public void setImageURL(String imageURL) {
 		this.imageURL = imageURL;
 	}
+
+	@Override
+	public String toString() {
+		return "Shoes [size=" + size + ", price=" + price + ", barcode=" + barcode + ", color=" + color + ", model="
+				+ model + ", stock=" + stock + ", imageURL=" + imageURL + "]";
+	}
 	
 }

@@ -1,9 +1,11 @@
+package model;
+
 import java.util.ArrayList;
 
 public class User {
     private String userName;
     private String password;
-    private ArrayList<Shoes> inventory;
+    public ArrayList<Shoes> inventory;
     private ArrayList<Shoes> cart;
     private Shoes current;
     
@@ -59,6 +61,15 @@ public class User {
 	}
     
     public void addToCart(Shoes toAdd) {
+    	if(toAdd.getStock() <= 0) {
+    		return;
+    	}
+    	if(cart.size() == 0) {
+    		Shoes temp = toAdd;
+    		temp.setStock(1);
+    		cart.add(temp);
+    		toAdd.setStock(toAdd.getStock()-1);
+    	}
     	for(int i = 0; i < cart.size(); i++) {
     		if(toAdd.getBarcode().equals(cart.get(i).getBarcode())) {
     			cart.get(i).setStock(cart.get(i).getStock() + toAdd.getStock());
@@ -73,6 +84,10 @@ public class User {
     }
     
     public void addToInventory(Shoes toAdd) {
+    	if(inventory.size() == 0) {
+    		inventory.add(toAdd);
+    		return;
+    	}
     	for(int i = 0; i < inventory.size(); i++) {
     		if(toAdd.getBarcode().equals(inventory.get(i).getBarcode())) {
     			inventory.get(i).setStock(inventory.get(i).getStock() + toAdd.getStock());
@@ -82,4 +97,10 @@ public class User {
     		}
     	}
     }
+
+	@Override
+	public String toString() {
+		return "User [userName=" + userName + ", password=" + password + ", inventory=" + inventory + ", cart=" + cart
+				+ ", current=" + current + "]";
+	}
 }
