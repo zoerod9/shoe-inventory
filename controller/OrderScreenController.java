@@ -34,4 +34,12 @@ public class OrderScreenController {
          stage.show();
 
     }
+    public void goToHome(ActionEvent event) throws IOException{
+        Parent root = FXMLLoader.load(getClass().getResource("/view/homeScreen.fxml"));
+        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root, 800, 800);
+        stage.setScene(scene);
+        stage.show();
+        
+    }
 }
