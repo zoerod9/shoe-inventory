@@ -13,7 +13,7 @@
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="67.0" stroke="BLACK" strokeType="INSIDE" width="650.0" />
       <Button fx:id="profile" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="35.0" styleClass="login-button" stylesheets="@application.css" />
-      <Button fx:id="home" layoutX="63.0" layoutY="14.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="35.0" styleClass="home-button" stylesheets="@application.css" />
+      <Button fx:id="home" layoutX="63.0" layoutY="14.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="35.0" styleClass="home-button" onAction="#goToHome" stylesheets="@application.css" />
       <ImageView fitHeight="43.0" fitWidth="123.0" layoutX="484.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../your-logo-here.png" />
