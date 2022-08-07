@@ -46,6 +46,10 @@ public class logInScreenController {
     	String userName = usernameInput.getText();
     	String password = passwordInput.getText();
         
+    	File data = new File("data");
+    	if(!data.exists()) {
+    	    data.createNewFile();	
+    	}
     	input = new File("data/" + userName + ".csv");
         if (input.exists()) {
             Scanner scanner = new Scanner(input);
@@ -107,6 +111,10 @@ public class logInScreenController {
     	String userName = usernameInput.getText();
     	String password = passwordInput.getText();
     	String confirmPass = passwordInputTwo.getText();
+    	File data = new File("data");
+    	if(!data.exists()) {
+    	    data.createNewFile();	
+    	}
     	input = new File("data/" + userName + ".csv");
     	
     	if(userName.equals("") || password.equals("")|| confirmPass.equals("")) {
