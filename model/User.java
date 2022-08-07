@@ -65,14 +65,16 @@ public class User {
     		return;
     	}
     	if(cart.size() == 0) {
-    		Shoes temp = toAdd;
+    		Shoes temp = new Shoes(toAdd);
     		temp.setStock(1);
     		cart.add(temp);
     		toAdd.setStock(toAdd.getStock()-1);
+    		return;
     	}
     	for(int i = 0; i < cart.size(); i++) {
     		if(toAdd.getBarcode().equals(cart.get(i).getBarcode())) {
-    			cart.get(i).setStock(cart.get(i).getStock() + toAdd.getStock());
+    			cart.get(i).setStock(cart.get(i).getStock() + 1);
+    			toAdd.setStock(toAdd.getStock()-1);
     		}
     		else if(i == cart.size()-1) {
     			Shoes temp = toAdd;
@@ -100,7 +102,7 @@ public class User {
 
 	@Override
 	public String toString() {
-		return "User [userName=" + userName + ", password=" + password + ", inventory=" + inventory + ", cart=" + cart
-				+ ", current=" + current + "]";
+		return "User = " + userName + "\nPassword = " + password + "\nInventory = " + inventory + "\nCart = " + cart
+				+ "\nCurrent = " + current;
 	}
 }

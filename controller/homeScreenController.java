@@ -3,39 +3,79 @@ package controller;
 import java.io.IOException;
 
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.Node;
-import javafx.scene.control.Label;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
-import model.Model;
+import model.User;
 
 public class homeScreenController {
 
-    @FXML
-    Label greeting;
+	private User curUser;
+    
+    public void updateUser(User user) {
+    	curUser = user;
+    }
 
-    public void displayText(ActionEvent action) {
-        greeting.setText(Model.getGreeting());
+    public void switchToInventory(ActionEvent event) throws IOException {
+    	FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/view/inventoryAddScreen.fxml"));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+        inventoryAddScreenController controller = loader.getController(); 
+        controller.updateUser(curUser);
+        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
     }
 
     public void switchToOrderScreen(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/view/orderScreen.fxml"));
+    	FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/view/orderScreen.fxml"));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+        OrderScreenController controller = loader.getController(); 
+        controller.updateUser(curUser);
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root, 800, 800); 
         stage.setScene(scene);
         stage.show();
+    }
 
-   }
-
-   public void switchToSearchScreen(ActionEvent event) throws IOException {
-    Parent root = FXMLLoader.load(getClass().getResource("/view/searchScreen.fxml"));
-    Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-    Scene scene = new Scene(root, 800, 800); 
-    stage.setScene(scene);
-    stage.show();
-
+    public void switchToSearchScreen(ActionEvent event) throws IOException {
+    	FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/view/searchScreen.fxml"));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+        SearchScreenController controller = loader.getController(); 
+        controller.updateUser(curUser);
+        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
+    }
+    
+    public void goToProfile(MouseEvent event) throws IOException {
+    	FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/view/profileScreen.fxml"));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+        profileScreenController controller = loader.getController(); 
+        controller.updateInfo(curUser);
+        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
+    }
+    
+    public void goToCart(MouseEvent event) throws IOException {
+    	FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/view/orderScreen.fxml"));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+        OrderScreenController controller = loader.getController(); 
+        controller.updateUser(curUser);
+        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
+    }
 }
- }

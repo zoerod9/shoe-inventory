@@ -8,9 +8,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.control.Label;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
-import model.Model;
-
+import model.User;
 import javafx.scene.Scene;
 
 public class OrderScreenController {
@@ -18,28 +18,48 @@ public class OrderScreenController {
     private Stage stage;
     private Scene scene;
     private Parent root;
+    private User curUser;
 
     @FXML
     Label greeting;
 
-    public void displayText(ActionEvent event) {
-        greeting.setText(Model.getGreeting());
+    public void updateUser(User user) {
+    	curUser = user;
     }
-
+    
     public void switchToSearchScreen(ActionEvent event) throws IOException {
-         Parent root = FXMLLoader.load(getClass().getResource("/view/searchScreen.fxml"));
-         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-         scene = new Scene(root); 
-         stage.setScene(scene);
-         stage.show();
-
-    }
-    public void goToHome(ActionEvent event) throws IOException{
-        Parent root = FXMLLoader.load(getClass().getResource("/view/homeScreen.fxml"));
+    	FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/view/searchScreen.fxml"));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+        SearchScreenController controller = loader.getController(); 
+        controller.updateUser(curUser);
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root, 800, 800);
         stage.setScene(scene);
         stage.show();
-        
+    }
+    
+    public void goHome(MouseEvent event) throws IOException {
+    	FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/view/homeScreen.fxml"));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+        homeScreenController controller = loader.getController(); 
+        controller.updateUser(curUser);
+        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
+    }
+    
+    public void goToProfile(MouseEvent event) throws IOException {
+    	FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/view/profileScreen.fxml"));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+        profileScreenController controller = loader.getController(); 
+        controller.updateInfo(curUser);
+        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
     }
 }

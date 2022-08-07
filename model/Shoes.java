@@ -29,6 +29,15 @@ public class Shoes {
     	this.imageURL = "NOTFOUND";
     }
 
+    public Shoes(Shoes temp) {
+        this.size = temp.size;
+        this.barcode = temp.barcode;
+    	this.color = temp.color;
+    	this.model = temp.model;
+    	this.stock = temp.stock;
+    	this.imageURL = temp.imageURL;
+    }
+    
 	public String getSize() {
 		return size;
 	}
@@ -87,8 +96,8 @@ public class Shoes {
 
 	@Override
 	public String toString() {
-		return "Shoes [size=" + size + ", price=" + price + ", barcode=" + barcode + ", color=" + color + ", model="
-				+ model + ", stock=" + stock + ", imageURL=" + imageURL + "]";
+		return "Size = " + size + "\nPrice = " + price + "\nBarcode = " + barcode + "\nColor = " + color + "\nModel = "
+				+ model + "\nStock = " + stock + "\nImageURL = " + imageURL;
 	}
 	
 }

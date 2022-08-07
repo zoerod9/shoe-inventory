@@ -12,13 +12,11 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
-import model.Model;
 import model.Shoes;
 import model.User;
 
@@ -71,23 +69,41 @@ public class itemDetailsScreenController {
     
     public void addToOrder(ActionEvent action) {
         curUser.addToCart(curUser.getCurrent());
-        
+        updateInfo(curUser);
     }
     
     public void goToProfile(MouseEvent event) throws IOException {
-        /*
-    	Parent root = FXMLLoader.load(getClass().getResource("/view/.fxml"));
+    	FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/view/profileScreen.fxml"));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+        profileScreenController controller = loader.getController(); 
+        controller.updateInfo(curUser);
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root); 
         stage.setScene(scene);
         stage.show();
-        */
     }
     
     public void goToHome(MouseEvent event) throws IOException {
-    	Parent root = FXMLLoader.load(getClass().getResource("/view/homeScreen.fxml"));
+    	FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/view/homeScreen.fxml"));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+        homeScreenController controller = loader.getController(); 
+        controller.updateUser(curUser);
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root); 
+        stage.setScene(scene);
+        stage.show();
+    }
+    
+    public void goToCart(MouseEvent event) throws IOException {
+    	FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/view/orderScreen.fxml"));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+        OrderScreenController controller = loader.getController(); 
+        controller.updateUser(curUser);
+        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         stage.setScene(scene);
         stage.show();
     }
