@@ -3,12 +3,14 @@ package main;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
+import utilities.Csv;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 
 public class Main extends Application {
 
     public static void main(String[] args) {
+
         launch(args);
     }
 
@@ -16,7 +18,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) {
         try {
             // BorderPane root = new BorderPane();
-            Parent root = FXMLLoader.load(getClass().getResource("/view/logInScreen.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("/view/searchScreen.fxml"));
             //Parent root = FXMLLoader.load(getClass().getResource("/view/screenThree.fxml"));
 
 

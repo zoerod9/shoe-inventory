@@ -11,6 +11,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import model.Shoes;
@@ -20,6 +21,9 @@ public class SearchScreenController {
 
 	private User curUser;
 	private ArrayList<Shoes> results;
+
+    @FXML
+    TextField userSearch;
 	
     @FXML
     TextArea result1;
@@ -34,16 +38,21 @@ public class SearchScreenController {
     	curUser = user;
     }
 
-    public void switchScreen(ActionEvent action) throws IOException{
-        FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("/view/itemDetailsScreen.fxml"));
-        Parent root = loader.load();
-        Scene scene = new Scene(root);
-        itemDetailsScreenController controller = loader.getController(); 
-        controller.updateInfo(curUser);
-        Stage stage = (Stage)((Node)action.getSource()).getScene().getWindow();
-        stage.setScene(scene);
-        stage.show();
+    // public void switchScreen(ActionEvent action) throws IOException{
+    //     FXMLLoader loader = new FXMLLoader();
+    //     loader.setLocation(getClass().getResource("/view/itemDetailsScreen.fxml"));
+    //     Parent root = loader.load();
+    //     Scene scene = new Scene(root);
+    //     itemDetailsScreenController controller = loader.getController(); 
+    //     controller.updateInfo(curUser);
+    //     Stage stage = (Stage)((Node)action.getSource()).getScene().getWindow();
+    //     stage.setScene(scene);
+    //     stage.show();
+    // }
+
+    public void search(ActionEvent action) throws IOException{
+        System.out.println("user search is: ");
+        System.out.println(userSearch.getText());
     }
     
     public void goToHome(MouseEvent event) throws IOException{
