@@ -16,8 +16,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) {
         try {
             // BorderPane root = new BorderPane();
-            Parent root = FXMLLoader.load(getClass().getResource("/view/itemDetailsScreen.fxml"));
-            //Parent root = FXMLLoader.load(getClass().getResource("/view/screenThree.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("/view/searchScreen.fxml"));
 
 
             Scene scene = new Scene(root, 586, 400);

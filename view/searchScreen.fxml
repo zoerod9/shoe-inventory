@@ -37,6 +37,6 @@
             <Image url="@../../images/cartImg.png" />
          </image>
       </ImageView>
-      <ListView fx:id="results" fixedCellSize="55.0" layoutX="29.0" layoutY="179.0" prefHeight="283.0" prefWidth="511.0" />
+      <ListView fx:id="results" onMouseClicked="#navigateToItemDetailScreen" fixedCellSize="55.0" layoutX="29.0" layoutY="179.0" prefHeight="283.0" prefWidth="511.0" />
    </children>
 </AnchorPane>

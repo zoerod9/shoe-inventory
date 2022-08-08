@@ -7,7 +7,6 @@ import java.io.IOException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -17,7 +16,6 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
-import model.Shoes;
 import model.User;
 
 public class itemDetailsScreenController {
@@ -58,8 +56,6 @@ public class itemDetailsScreenController {
 			image = new Image(new FileInputStream(curUser.getCurrent().getImageURL()));
 			shoeImage.setImage(image);
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			//e.printStackTrace();
 			System.out.println("ERROR FINDING SHOE IMAGE");
 		}
 		if(user.getCurrent().getStock() <= 0) {
