@@ -62,15 +62,19 @@ public class ProfileScreenController {
         for (int i = 0; i < curUser.getInventory().size(); i++) {
             invText = invText + " " + curUser.getInventory().get(i).toString();
         }
-        if (invText.equals(""))
+        if (invText.equals("")) {
             invText = "INVENTORY IS EMPTY";
+        }
+
         inventoryText.setText("Inventory: " + invText);
         String tempCartText = "";
         for (int i = 0; i < curUser.getCart().size(); i++) {
             tempCartText = tempCartText + " " + curUser.getCart().get(i).toString();
         }
-        if (tempCartText.equals(""))
+        if (tempCartText.equals("")) {
             tempCartText = "CART IS EMPTY";
+        }
+
         cartText.setText("Current Cart: \n" + tempCartText);
     }
 

@@ -57,20 +57,6 @@ public class HomeScreenController {
         toCheckIn.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
     }
 
-    // Contains code for a scence that was not utilized.
-
-    // public void switchToInventory(ActionEvent event) throws IOException {
-    // FXMLLoader loader = new FXMLLoader();
-    // loader.setLocation(getClass().getResource("/view/inventoryAddScreen.fxml"));
-    // Parent root = loader.load();
-    // Scene scene = new Scene(root);
-    // inventoryAddScreenController controller = loader.getController();
-    // controller.updateUser(curUser);
-    // Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-    // stage.setScene(scene);
-    // stage.show();
-    // }
-
     /*
      * addToInventory runs when a shoe is selected from the incoming inventory to be
      * added to the
