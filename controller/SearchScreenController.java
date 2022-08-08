@@ -10,29 +10,25 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import model.Shoes;
 import model.User;
+import utilities.Csv;
 
 public class SearchScreenController {
 
 	private User curUser;
-	private ArrayList<Shoes> results;
+	// private ArrayList<Shoes> results;
+
+    @FXML
+    ListView<String> results;
 
     @FXML
     TextField userSearch;
-	
-    @FXML
-    TextArea result1;
-    @FXML
-    TextArea result2;
-    @FXML
-    TextArea result3;
-    @FXML
-    TextArea result4;
 
     public void updateUser(User user) {
     	curUser = user;
@@ -51,8 +47,36 @@ public class SearchScreenController {
     // }
 
     public void search(ActionEvent action) throws IOException{
-        System.out.println("user search is: ");
-        System.out.println(userSearch.getText());
+        // remove current search results
+        results.getItems().clear();
+
+        String searchTerm = userSearch.getText();
+        ArrayList<Shoes> shoes = Csv.getShoesFromCsv();
+
+        // every time a shoe matches the search
+        // add it to found shoes
+        for (Shoes shoeToSearch : shoes) {
+            // if the name matches, add it to found shoes
+            if (searchTerm.equals(shoeToSearch.getModel())){
+                results.getItems().add(shoeToSearch.getModel());
+            }
+            // if the name starts with the search term, add it to found shoes
+            if (shoeToSearch.getModel().startsWith(searchTerm)){
+                results.getItems().add(shoeToSearch.getModel());
+            }
+            // if the barcode matches, add it to found shoes
+            if (shoeToSearch.getBarcode().equals(searchTerm)){
+                results.getItems().add(shoeToSearch.getModel());
+            }
+            // if the color matches, add it to found shoes
+            if (shoeToSearch.getColor().equals(searchTerm)){
+                results.getItems().add(shoeToSearch.getModel());
+            }
+        }
+
+        // what to do with found shoes?
+        // send them to the view!
+
     }
     
     public void goToHome(MouseEvent event) throws IOException{
