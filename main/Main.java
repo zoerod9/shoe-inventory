@@ -13,15 +13,28 @@ import javafx.scene.Scene;
 
 public class Main extends Application {
 
+	/*
+	 * main method of the program will run and start the program
+	 * Parameters: 
+	 * String[] args: The arguments given to the program while compiling and running.
+	 * Returns:
+	 * No return
+	 */
     public static void main(String[] args) {
         launch(args);
     }
 
+   /*
+    * start is an overwritten method that will allow the program to open and display the homeScreen
+    * and will then allow the program to be run.
+    * Parameters:
+    * Stage primaryStage: the stage to be set and used when the program first runs
+    * Returns:
+    * No returns but will update the primaryStage with the home screen. 
+    */
     @Override
     public void start(Stage primaryStage) {
         try {
-            // BorderPane root = new BorderPane();
-            // Parent root = FXMLLoader.load(getClass().getResource("/view/homeScreen.fxml"));
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(getClass().getResource("/view/homeScreen.fxml"));
             Parent root = loader.load();

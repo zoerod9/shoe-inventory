@@ -9,6 +9,14 @@ import model.Shoes;
 
 public class Csv {
 
+	/*
+	 * getShoesFromCSV will read in shoes from the specific data file and will then
+	 * put them in an ArrayList of shoes and return that ArrayList
+	 * Parameters:
+	 * None but data/shoes.csv must exist
+	 * Returns:
+	 * An ArrayList of Shoes that are taken from the CSV file.
+	 */
     public static ArrayList<Shoes> getShoesFromCsv() throws FileNotFoundException {
         ArrayList<Shoes> shoes = new ArrayList<>();
         File file = new File("data/shoes.csv");
@@ -29,6 +37,14 @@ public class Csv {
         return shoes;
     }
 
+    /*
+	 * getShoesToCheckInFromCSV will read in shoes from the specific data file and will then
+	 * put them in an ArrayList of shoes and return that ArrayList of shoes to checkIn
+	 * Parameters:
+	 * None but data/shoesToCheckIn.csv must exist
+	 * Returns:
+	 * An ArrayList of Shoes that are taken from the CSV file that need to be checked in still.
+	 */
     public static ArrayList<Shoes> getShoesToCheckInFromCsv() throws FileNotFoundException {
         ArrayList<Shoes> shoes = new ArrayList<>();
         File file = new File("data/shoesToCheckIn.csv");
