@@ -104,7 +104,9 @@ public class ProfileScreenController {
         Parent root = loader.load();
         Scene scene = new Scene(root);
         HomeScreenController controller = loader.getController(); 
-        controller.updateUser(curUser); //This line will update information for the new screen
+        controller.updateUser(curUser);
+        ArrayList<Shoes> uncheckedShoes = Csv.getShoesToCheckInFromCsv();
+        controller.setToCheckIn(uncheckedShoes);
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         stage.setScene(scene);
         stage.show();

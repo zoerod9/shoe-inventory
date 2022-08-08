@@ -1,6 +1,7 @@
 package controller;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -10,7 +11,9 @@ import javafx.scene.Parent;
 import javafx.scene.control.TextArea;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import model.Shoes;
 import model.User;
+import utilities.Csv;
 import javafx.scene.Scene;
 
 public class OrderScreenController {
@@ -95,6 +98,8 @@ public class OrderScreenController {
         Scene scene = new Scene(root);
         HomeScreenController controller = loader.getController(); 
         controller.updateUser(curUser); //This line will update information for the new screen
+        ArrayList<Shoes> uncheckedShoes = Csv.getShoesToCheckInFromCsv();
+        controller.setToCheckIn(uncheckedShoes);
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         stage.setScene(scene);
         stage.show();

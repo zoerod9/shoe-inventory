@@ -41,7 +41,6 @@ public class Main extends Application {
             ArrayList<Shoes> uncheckedShoes = Csv.getShoesToCheckInFromCsv();
             HomeScreenController controller = loader.getController();
             controller.setToCheckIn(uncheckedShoes);
-            
             Scene scene = new Scene(root, 586, 400);
             scene.getStylesheets().add(getClass().getResource("/view/application.css").toExternalForm());
             primaryStage.setScene(scene);

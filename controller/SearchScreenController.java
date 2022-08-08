@@ -135,6 +135,8 @@ public class SearchScreenController {
         Parent root = loader.load();
         Scene scene = new Scene(root);
         HomeScreenController controller = loader.getController();
+        ArrayList<Shoes> uncheckedShoes = Csv.getShoesToCheckInFromCsv();
+        controller.setToCheckIn(uncheckedShoes);
         controller.updateUser(curUser); //This line will update information for the new screen
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setScene(scene);
