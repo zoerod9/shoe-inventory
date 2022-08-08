@@ -19,41 +19,49 @@ import utilities.Csv;
 
 public class SearchScreenController {
 
-	//This is the user object that will keep track of the shoes from class to class and screen to screen
+    // This is the user object that will keep track of the shoes from class to class
+    // and screen to screen
     private User curUser = new User("", "");
 
-    //Variables for the lists of the results from the screen FXML file and the internalResults array.
+    // Variables for the lists of the results from the screen FXML file and the
+    // internalResults array.
     @FXML
     ListView<String> results;
     ArrayList<Shoes> internalResults = new ArrayList<>();
-    
-    //Variable that contains the TextField containing userInput from the FXML file
+
+    // Variable that contains the TextField containing userInput from the FXML file
     @FXML
     TextField userSearch;
 
     /*
-     * updateUser takes in a User object and creates a new object with that user's information
-     * essentially passing the information from one user to anther and one class to another 
-     * Parameters: 
-     * User user: The User who is currently using this program and will be moved to the new screen
+     * updateUser takes in a User object and creates a new object with that user's
+     * information
+     * essentially passing the information from one user to anther and one class to
+     * another
+     * Parameters:
+     * User user: The User who is currently using this program and will be moved to
+     * the new screen
      * Returns:
      * No returns but curUser is updated with values from user
      */
     public void updateUser(User user) {
-    	curUser = new User("", "");
-    	curUser.setCart(user.getCart());
-    	curUser.setCurrent(user.getCurrent());
-    	curUser.setInventory(user.getInventory());
+        curUser = new User("", "");
+        curUser.setCart(user.getCart());
+        curUser.setCurrent(user.getCurrent());
+        curUser.setInventory(user.getInventory());
     }
 
     /*
-     * navigateToItemDetailScreen will switch the scene to the item details screen when the user presses on 
+     * navigateToItemDetailScreen will switch the scene to the item details screen
+     * when the user presses on
      * the shoes they want to view from the search.
-     * Parameters: 
-     * MouseEvent action: The action that occurred which lets the program know that the user wants to
+     * Parameters:
+     * MouseEvent action: The action that occurred which lets the program know that
+     * the user wants to
      * view more details about the searched shoe.
      * Returns:
-     * No return but will update what shoes were selected and will set the current shoe of user
+     * No return but will update what shoes were selected and will set the current
+     * shoe of user
      * to the selected shoe update information and then switch scenes.
      */
     public void navigateToItemDetailScreen(MouseEvent action) throws IOException {
@@ -66,21 +74,25 @@ public class SearchScreenController {
         Scene scene = new Scene(root);
         ItemDetailsScreenController controller = loader.getController();
         curUser.setCurrent(selectedShoes);
-        controller.updateInfo(curUser); //This line will update information for the new screen
-        Stage stage = (Stage)((Node)action.getSource()).getScene().getWindow();
+        controller.updateInfo(curUser); // This line will update information for the new screen
+        Stage stage = (Stage) ((Node) action.getSource()).getScene().getWindow();
         stage.setScene(scene);
         stage.show();
     }
 
     /*
-     * search will search the inventory of shoes using the information provided by the users to 
-     * attempt to find any matches. If found they will display to the screen and can be selected to 
+     * search will search the inventory of shoes using the information provided by
+     * the users to
+     * attempt to find any matches. If found they will display to the screen and can
+     * be selected to
      * view more details.
      * Parameters:
-     * ActionEvent action: This lets the program know that the user wishes to search with the information
+     * ActionEvent action: This lets the program know that the user wishes to search
+     * with the information
      * they have typed in the search bar.
      * Returns:
-     * No returns but updates the screen with the shoes that were found to match the input.
+     * No returns but updates the screen with the shoes that were found to match the
+     * input.
      */
     public void search(ActionEvent action) throws IOException {
         // remove current search results
@@ -121,12 +133,15 @@ public class SearchScreenController {
     }
 
     /*
-     * goHome will switch the scene to the home screen when the user presses on the proper button.
-     * Parameters: 
-     * ActionEvent event: The event that occurred which lets the program know that the user wants to
+     * goHome will switch the scene to the home screen when the user presses on the
+     * proper button.
+     * Parameters:
+     * ActionEvent event: The event that occurred which lets the program know that
+     * the user wants to
      * change to the home screen.
      * Returns:
-     * No return but will update the curUser of the new class with this curUser and will update
+     * No return but will update the curUser of the new class with this curUser and
+     * will update
      * information on that screen then will change to that screen.
      */
     public void goHome(ActionEvent event) throws IOException {
@@ -137,20 +152,23 @@ public class SearchScreenController {
         HomeScreenController controller = loader.getController();
         ArrayList<Shoes> uncheckedShoes = Csv.getShoesToCheckInFromCsv();
         controller.setToCheckIn(uncheckedShoes);
-        controller.updateUser(curUser); //This line will update information for the new screen
+        controller.updateUser(curUser); // This line will update information for the new screen
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setScene(scene);
         stage.show();
     }
 
     /*
-     * goToCart will switch the scene to the order screen when the user presses on the
+     * goToCart will switch the scene to the order screen when the user presses on
+     * the
      * proper button.
-     * Parameters: 
-     * ActionEvent event: The event that occurred which lets the program know that the user wants to
+     * Parameters:
+     * ActionEvent event: The event that occurred which lets the program know that
+     * the user wants to
      * change to the order screen.
      * Returns:
-     * No return but will update the curUser of the new class with this curUser and will update
+     * No return but will update the curUser of the new class with this curUser and
+     * will update
      * information on that screen then will change to that screen.
      */
     public void goToCart(ActionEvent event) throws IOException {
@@ -159,20 +177,23 @@ public class SearchScreenController {
         Parent root = loader.load();
         Scene scene = new Scene(root);
         OrderScreenController controller = loader.getController();
-        controller.updateUser(curUser); //This line will update information for the new screen
+        controller.updateUser(curUser); // This line will update information for the new screen
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setScene(scene);
         stage.show();
     }
 
     /*
-     * goToProfile will switch the scene to the profile screen when the user presses on the
+     * goToProfile will switch the scene to the profile screen when the user presses
+     * on the
      * proper button.
-     * Parameters: 
-     * ActionEvent event: The event that occurred which lets the program know that the user wants to
+     * Parameters:
+     * ActionEvent event: The event that occurred which lets the program know that
+     * the user wants to
      * change to the profile screen.
      * Returns:
-     * No return but will update the curUser of the new class with this curUser and will update
+     * No return but will update the curUser of the new class with this curUser and
+     * will update
      * information on that screen then will change to that screen.
      */
     public void goToProfile(ActionEvent event) throws IOException {
@@ -181,7 +202,7 @@ public class SearchScreenController {
         Parent root = loader.load();
         Scene scene = new Scene(root);
         ProfileScreenController controller = loader.getController();
-        controller.updateInfo(curUser); //This line will update information for the new screen
+        controller.updateInfo(curUser); // This line will update information for the new screen
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setScene(scene);
         stage.show();
