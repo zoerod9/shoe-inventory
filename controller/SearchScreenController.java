@@ -13,9 +13,9 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+import model.Csv;
 import model.Shoes;
 import model.User;
-import utilities.Csv;
 
 public class SearchScreenController {
 

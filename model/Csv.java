@@ -1,4 +1,4 @@
-package utilities;
+package model;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -8,8 +8,6 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
-
-import model.Shoes;
 
 public class Csv {
 

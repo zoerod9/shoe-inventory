@@ -11,9 +11,9 @@ import javafx.scene.Parent;
 import javafx.scene.control.TextArea;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import model.Csv;
 import model.Shoes;
 import model.User;
-import utilities.Csv;
 import javafx.scene.Scene;
 
 public class OrderScreenController {

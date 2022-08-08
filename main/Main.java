@@ -6,8 +6,8 @@ import controller.HomeScreenController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
+import model.Csv;
 import model.Shoes;
-import utilities.Csv;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 

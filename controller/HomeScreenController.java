@@ -12,9 +12,9 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.SelectionMode;
 import javafx.scene.Node;
 import javafx.stage.Stage;
+import model.Csv;
 import model.Shoes;
 import model.User;
-import utilities.Csv;
 
 public class HomeScreenController {
 
