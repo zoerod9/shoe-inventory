@@ -240,5 +240,35 @@ public class Shoes {
 		return "\nSize = " + size + " Price = " + price + " Barcode = " + barcode + " Color = " + color + "\nModel = "
 				+ model + " Stock = " + stock + " ImageURL = " + imageURL + "\n";
 	}
+
+
+     	/*
+     * equals will return a boolean representing if the given object is equal to this object
+     * Parameters: 
+     * Object obj
+     * Returns:
+     * true if they are equal
+     */
+	@Override
+     public boolean equals(Object obj) {
+		if (obj instanceof Shoes){
+               Shoes shoes =  (Shoes) obj;
+               if (
+                    shoes.getBarcode().equals(this.getBarcode()) 
+                    && shoes.getColor().equals(this.getColor())
+                    && shoes.getImageURL().equals(this.getImageURL())
+                    && shoes.getModel().equals(this.getModel())
+                    && shoes.getPrice().equals(this.getPrice())
+                    && shoes.getSize().equals(this.getSize())
+                    && shoes.getStock() == this.getStock()
+                    ){
+                         return true;
+                    }
+          }
+
+          return false;
+	}
+
+     
 	
 }

@@ -82,6 +82,15 @@ public class HomeScreenController {
             Shoes selectedShoes = internalToCheckIn.get(selectedIndex);
             Csv.checkInShoes(selectedShoes);
         });
+
+        ArrayList<Shoes> toNotCheckIn = Csv.getShoesToCheckInFromCsv();
+        ArrayList<String> toNotCheckInDisplay = new ArrayList<>();
+
+        for (Shoes shoes : toNotCheckIn) {
+            toNotCheckInDisplay.add(shoes.getModel());
+        }
+
+        toCheckIn.getItems().setAll(toNotCheckInDisplay);
     }
 
     /*
