@@ -25,7 +25,6 @@ public class SearchScreenController {
 
     @FXML
     ListView<String> results;
-
     ArrayList<Shoes> internalResults = new ArrayList<>();
 
     @FXML
@@ -37,15 +36,13 @@ public class SearchScreenController {
 
     public void navigateToItemDetailScreen(MouseEvent action) throws IOException {
         int selected = results.getSelectionModel().getSelectedIndex();
-        // how do we tell the item details controller,
-        // that this is the shoe we want details of
         Shoes selectedShoes = internalResults.get(selected);
 
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("/view/itemDetailsScreen.fxml"));
         Parent root = loader.load();
         Scene scene = new Scene(root);
-        itemDetailsScreenController controller = loader.getController();
+        ItemDetailsScreenController controller = loader.getController();
         curUser.setCurrent(selectedShoes);
         controller.updateInfo(curUser);
         Stage stage = (Stage)((Node)action.getSource()).getScene().getWindow();
@@ -96,7 +93,7 @@ public class SearchScreenController {
         loader.setLocation(getClass().getResource("/view/homeScreen.fxml"));
         Parent root = loader.load();
         Scene scene = new Scene(root);
-        homeScreenController controller = loader.getController();
+        HomeScreenController controller = loader.getController();
         controller.updateUser(curUser);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setScene(scene);
@@ -128,7 +125,7 @@ public class SearchScreenController {
         loader.setLocation(getClass().getResource("/view/profileScreen.fxml"));
         Parent root = loader.load();
         Scene scene = new Scene(root);
-        profileScreenController controller = loader.getController();
+        ProfileScreenController controller = loader.getController();
         controller.updateInfo(curUser);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setScene(scene);

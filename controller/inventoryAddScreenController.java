@@ -16,7 +16,7 @@ import javafx.stage.Stage;
 import model.Shoes;
 import model.User;
 
-public class inventoryAddScreenController {
+public class InventoryAddScreenController {
     
 	private User curUser;
 	
@@ -70,7 +70,7 @@ public class inventoryAddScreenController {
         loader.setLocation(getClass().getResource("/view/profileScreen.fxml"));
         Parent root = loader.load();
         Scene scene = new Scene(root);
-        profileScreenController controller = loader.getController(); 
+        ProfileScreenController controller = loader.getController(); 
         controller.updateInfo(curUser);
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         stage.setScene(scene);
@@ -94,7 +94,7 @@ public class inventoryAddScreenController {
         loader.setLocation(getClass().getResource("/view/homeScreen.fxml"));
         Parent root = loader.load();
         Scene scene = new Scene(root);
-        homeScreenController controller = loader.getController(); 
+        HomeScreenController controller = loader.getController(); 
         controller.updateUser(curUser);
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         stage.setScene(scene);

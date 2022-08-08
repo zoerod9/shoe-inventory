@@ -18,7 +18,7 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import model.User;
 
-public class itemDetailsScreenController {
+public class ItemDetailsScreenController {
 
 	private User curUser;
 	
@@ -73,7 +73,7 @@ public class itemDetailsScreenController {
         loader.setLocation(getClass().getResource("/view/profileScreen.fxml"));
         Parent root = loader.load();
         Scene scene = new Scene(root);
-        profileScreenController controller = loader.getController(); 
+        ProfileScreenController controller = loader.getController(); 
         controller.updateInfo(curUser);
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         stage.setScene(scene);
@@ -85,7 +85,7 @@ public class itemDetailsScreenController {
         loader.setLocation(getClass().getResource("/view/homeScreen.fxml"));
         Parent root = loader.load();
         Scene scene = new Scene(root);
-        homeScreenController controller = loader.getController(); 
+        HomeScreenController controller = loader.getController(); 
         controller.updateUser(curUser);
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         stage.setScene(scene);

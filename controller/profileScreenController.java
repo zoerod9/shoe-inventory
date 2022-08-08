@@ -16,7 +16,7 @@ import javafx.stage.Stage;
 import model.Shoes;
 import model.User;
 
-public class profileScreenController {
+public class ProfileScreenController {
     private User curUser;
 	
     @FXML
@@ -51,7 +51,7 @@ public class profileScreenController {
         loader.setLocation(getClass().getResource("/view/homeScreen.fxml"));
         Parent root = loader.load();
         Scene scene = new Scene(root);
-        homeScreenController controller = loader.getController(); 
+        HomeScreenController controller = loader.getController(); 
         controller.updateUser(curUser);
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         stage.setScene(scene);

@@ -11,14 +11,14 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.Rectangle?>
 
-<AnchorPane prefHeight="400.0" prefWidth="584.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.homeScreenController">
+<AnchorPane prefHeight="400.0" prefWidth="584.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomeScreenController">
    <children>
       <Pane layoutX="3.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="584.0">
          <children>
             <Label layoutX="185.0" layoutY="127.0" prefHeight="24.0" prefWidth="224.0" text="New Arrivals/Incoming Inventory" />
             <HBox alignment="CENTER" layoutX="14.0" layoutY="66.0" prefHeight="45.0" prefWidth="536.0">
                <children>
-                  <Button alignment="CENTER" maxWidth="162.0" minHeight="-Infinity" minWidth="35.0" mnemonicParsing="false" onAction="#switchToInventory" prefHeight="33.0" prefWidth="162.0" text="Add To Inventory">
+                  <Button alignment="CENTER" maxWidth="162.0" minHeight="-Infinity" minWidth="35.0" mnemonicParsing="false" onAction="#addToInventory" prefHeight="33.0" prefWidth="162.0" text="Check in Selected Shoes">
                      <HBox.margin>
                         <Insets right="40.0" />
                      </HBox.margin>
@@ -30,7 +30,7 @@
                   </Button>
                </children>
             </HBox>
-            <ListView layoutX="25.0" layoutY="177.0" prefHeight="200.0" prefWidth="536.0" />
+            <ListView fx:id="toCheckIn" layoutX="25.0" layoutY="177.0" prefHeight="200.0" prefWidth="536.0" />
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="60.0" layoutX="-6.0" stroke="BLACK" strokeType="INSIDE" width="591.0" />
             <ImageView fitHeight="52.0" fitWidth="53.0" layoutX="2.0" layoutY="3.0" onMouseClicked="#goToProfile" pickOnBounds="true" preserveRatio="true">
                <image>
