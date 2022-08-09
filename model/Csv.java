@@ -32,7 +32,7 @@ public class Csv {
      */
     public static ArrayList<Shoes> getShoesFromCsv() throws FileNotFoundException {
         ArrayList<Shoes> shoes = new ArrayList<>();
-        File file = new File("src/shoes.csv");
+        File file = new File("data/shoes.csv");
         Scanner scan = new Scanner(file);
         while (scan.hasNext()) {
             String line = scan.next();
@@ -59,7 +59,7 @@ public class Csv {
      */
     public static ArrayList<Shoes> getShoesToCheckInFromCsv() throws FileNotFoundException {
         ArrayList<Shoes> shoes = new ArrayList<>();
-        File file = new File("src/shoesToCheckIn.csv");
+        File file = new File("data/shoesToCheckIn.csv");
         Scanner scan = new Scanner(file);
         while (scan.hasNext()) {
             String line = scan.next();
@@ -117,7 +117,7 @@ public class Csv {
             }
         }
 
-        try (PrintWriter checkInWriter = new PrintWriter("src/shoesToCheckIn.csv")) {
+        try (PrintWriter checkInWriter = new PrintWriter("data/shoesToCheckIn.csv")) {
             checkInWriter.print("");
             // write the leftover shoes to the file
             for (String string : shoesToKeepInCheckin) {
