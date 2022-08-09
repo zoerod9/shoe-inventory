@@ -8,7 +8,9 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TextArea;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import model.Csv;
@@ -153,6 +155,9 @@ public class OrderScreenController {
      * in the cart.
      */
     public void placeOrder(ActionEvent event) {
-        System.out.println("Order placed");
+        Alert alert = new Alert(AlertType.INFORMATION);
+        alert.setContentText("Sucess!");
+        alert.setHeaderText("Your order has been placed");
+        alert.show();
     }
 }
