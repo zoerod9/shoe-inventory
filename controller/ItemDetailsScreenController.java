@@ -100,7 +100,7 @@ public class ItemDetailsScreenController {
         // found.
         Image image;
         try {
-            image = new Image(new FileInputStream("src/" + curUser.getCurrent().getImageURL()));
+            image = new Image(new FileInputStream("images/" + curUser.getCurrent().getImageURL()));
             shoeImage.setImage(image);
         } catch (FileNotFoundException e) {
             System.out.println(e);
