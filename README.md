@@ -19,6 +19,6 @@ input especially for stock which should only be an integer.
 # Credits:
 TEAM LEAD: Zoe Rodriguez - zoerod09
 
-TEAM MEMBER: Enrique Mata - EnriqueM08
+TEAM MEMBER: Enrique Mata - EnriqueM08 
 
 TEAM MEMBER: William El Haber - william1253

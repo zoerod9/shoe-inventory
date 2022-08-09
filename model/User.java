@@ -191,7 +191,7 @@ public class User {
 
      /*
       * toString will return a string representation of the User class
-      * @param None
+      * @param None 
       * @return A String representing the User class with its variables.
       */
      @Override

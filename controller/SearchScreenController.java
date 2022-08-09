@@ -190,4 +190,4 @@ public class SearchScreenController {
         stage.setScene(scene);
         stage.show();
     }
-}
+} 

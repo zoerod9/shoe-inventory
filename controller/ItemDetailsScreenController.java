@@ -161,7 +161,7 @@ public class ItemDetailsScreenController {
      * @param event: The event that occurred which lets the program know that
      * the user wants to change to the order screen.
      * @return No return but will update the curUser of the new class with this curUser and
-     * will update information on that screen then will change to that screen.
+     * will update information on that screen then will change to that screen. 
      */
     public void goToCart(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader();

@@ -22,7 +22,7 @@ import model.User;
  * class also initializes most of the variables that will be used throughout the rest of the program.
  * 
  * @authors Zoe Rodriguez (vcd011), Enrique Mata (rre165), William El Haber (csn639)
- * UTSA CS 3443 - shoe-inventory Team Project
+ * UTSA CS 3443 - shoe-inventory Team Project 
  * Summer 2022
  */
 

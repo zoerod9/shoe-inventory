@@ -187,7 +187,7 @@ public class Shoes {
 
      /*
       * getImageURL will return the imageURL of this shoe.
-      * @param None
+      * @param None 
       * @return A String representing the imageURL of the shoe.
       */
      public String getImageURL() {

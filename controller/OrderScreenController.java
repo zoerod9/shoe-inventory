@@ -24,7 +24,7 @@ import javafx.scene.Scene;
  * will also be able to display information about the cart and the current order.
  * 
  * @authors Zoe Rodriguez (vcd011), Enrique Mata (rre165), William El Haber (csn639)
- * UTSA CS 3443 - shoe-inventory Team Project
+ * UTSA CS 3443 - shoe-inventory Team Project 
  * Summer 2022
  */
 
