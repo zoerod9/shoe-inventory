@@ -106,22 +106,22 @@ public class SearchScreenController {
         // add it to found shoes
         for (Shoes shoeToSearch : shoes) {
             // if the name matches, add it to found shoes
-            if (searchTerm.equals(shoeToSearch.getModel())) {
+            if (searchTerm.equalsIgnoreCase(shoeToSearch.getModel())) {
                 results.getItems().add(shoeToSearch.getModel());
                 internalResults.add(shoeToSearch);
             }
             // if the name starts with the search term, add it to found shoes
-            if (shoeToSearch.getModel().startsWith(searchTerm)) {
+            if (shoeToSearch.getModel().toUpperCase().startsWith(searchTerm.toUpperCase())) {
                 results.getItems().add(shoeToSearch.getModel());
                 internalResults.add(shoeToSearch);
             }
             // if the barcode matches, add it to found shoes
-            if (shoeToSearch.getBarcode().equals(searchTerm)) {
+            if (shoeToSearch.getBarcode().equalsIgnoreCase(searchTerm)) {
                 results.getItems().add(shoeToSearch.getModel());
                 internalResults.add(shoeToSearch);
             }
             // if the color matches, add it to found shoes
-            if (shoeToSearch.getColor().equals(searchTerm)) {
+            if (shoeToSearch.getColor().equalsIgnoreCase(searchTerm)) {
                 results.getItems().add(shoeToSearch.getModel());
                 internalResults.add(shoeToSearch);
             }

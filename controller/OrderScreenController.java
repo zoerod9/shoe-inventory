@@ -20,9 +20,7 @@ import javafx.scene.Scene;
 
 public class OrderScreenController {
 
-    private Stage stage;
-    private Scene scene;
-    private Parent root;
+
     private User curUser;
 
     // Variables from the FXML that will be utilized by the class in methods.
@@ -156,6 +154,9 @@ public class OrderScreenController {
      */
     public void placeOrder(ActionEvent event) {
         Alert alert = new Alert(AlertType.INFORMATION);
+        curUser.getCart().clear();
+        orderText.clear();
+        totalText.setText("Total: $0");
         alert.setContentText("Sucess!");
         alert.setHeaderText("Your order has been placed");
         alert.show();

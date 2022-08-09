@@ -240,8 +240,8 @@ public class Shoes {
       */
      @Override
      public String toString() {
-          return "\nSize = " + size + " Price = " + price + " Barcode = " + barcode + " Color = " + color + "\nModel = "
-                    + model + " Stock = " + stock + " ImageURL = " + imageURL + "\n";
+          return "\nSize = " + size + ", Price = " + price + ", Barcode = " + barcode + ", Color = " + color + "\nModel = "
+                    + model + ", Stock = " + stock + "\n";
      }
 
      /*
