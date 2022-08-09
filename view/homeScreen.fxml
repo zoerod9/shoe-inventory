@@ -21,7 +21,7 @@
                         <Insets right="40.0" />
                      </HBox.margin>
                   </Button>
-                  <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#switchToSearchScreen" text="Advanced Search">
+                  <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#switchToSearchScreen" text="Search">
                      <HBox.margin>
                         <Insets right="20.0" />
                      </HBox.margin>

@@ -131,9 +131,9 @@ public class OrderScreenController {
         stage.setScene(scene);
         stage.show();
     }
+    
 
-    /*
-     * NOT WORKING YET TEMPORARY FUNCTION
+    /* 
      * placeOrder will update the stock in the csv file and will place the order.
      * @param event: The event that occurred which lets the program know that
      * the user wants to place the order of the current cart.
