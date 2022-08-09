@@ -2,6 +2,15 @@ package model;
 
 import java.util.ArrayList;
 
+/**
+ * User is a class that contains information for a User object that will store the User's cart and
+ * inventory and the current shoe viewed. Has methods to a shoe to the cart and inventory.
+ * 
+ * @authors Zoe Rodriguez (vcd011), Enrique Mata (rre165), William El Haber (csn639)
+ * UTSA CS 3443 - shoe-inventory Team Project
+ * Summer 2022
+ */
+
 public class User {
 
      // Variables that will hold the information about the User
@@ -13,11 +22,9 @@ public class User {
 
      /*
       * User constructor method with a userName and password passed in
-      * Parameters:
-      * String userName: This is the userName of the current user
-      * String password: This is the password of the current user
-      * Returns:
-      * No return is constructor
+      * @param userName: This is the userName of the current user
+      * @param password: This is the password of the current user
+      * @return No return is constructor
       */
      public User(String userName, String password) {
           // Sets username and password and creates the inventory and cart ArrayLists
@@ -29,10 +36,8 @@ public class User {
 
      /*
       * getCurrentUser returns the current user which is this
-      * Parameters:
-      * None
-      * Returns:
-      * A User representing the current user which is this
+      * @param None
+      * @return A User representing the current user which is this
       */
      public User getCurrentUser() {
           return this;
@@ -40,10 +45,8 @@ public class User {
 
      /*
       * getUserName returns the userName of this User
-      * Parameters:
-      * None
-      * Returns:
-      * A String representing the User's userName
+      * @param None
+      * @return A String representing the User's userName
       */
      public String getUserName() {
           return userName;
@@ -51,10 +54,8 @@ public class User {
 
      /*
       * setUserName sets the User's userName to the passed in String
-      * Parameters:
-      * String userName: The String to change this.userName to.
-      * Returns:
-      * No Returns
+      * @param userName: The String to change this.userName to.
+      * @return No Returns
       */
      public void setUserName(String userName) {
           this.userName = userName;
@@ -62,10 +63,8 @@ public class User {
 
      /*
       * getPassword returns the password of this User
-      * Parameters:
-      * None
-      * Returns:
-      * A String representing the User's password
+      * @param None
+      * @return A String representing the User's password
       */
      public String getPassword() {
           return password;
@@ -73,10 +72,8 @@ public class User {
 
      /*
       * setPassword sets the User's password to the passed in String
-      * Parameters:
-      * String password: The String to change this.password to.
-      * Returns:
-      * No Returns
+      * @param password: The String to change this.password to.
+      * @return No Returns
       */
      public void setPassword(String password) {
           this.password = password;
@@ -84,10 +81,8 @@ public class User {
 
      /*
       * getInventory returns the Inventory of this User
-      * Parameters:
-      * None
-      * Returns:
-      * An ArrayList of shoes that represents the inventory of this User.
+      * @param None
+      * @return An ArrayList of shoes that represents the inventory of this User.
       */
      public ArrayList<Shoes> getInventory() {
           return inventory;
@@ -95,10 +90,8 @@ public class User {
 
      /*
       * setInventory sets the User's inventory to the passed in ArrayList
-      * Parameters:
-      * ArrayList<Shoes> inventory: The ArrayList to set the inventory to.
-      * Returns:
-      * No Returns
+      * @param inventory: The ArrayList to set the inventory to.
+      * @return No Returns
       */
      public void setInventory(ArrayList<Shoes> inventory) {
           this.inventory = inventory;
@@ -106,10 +99,8 @@ public class User {
 
      /*
       * getCurrent returns the current shoe of this User
-      * Parameters:
-      * None
-      * Returns:
-      * A Shoes object representing the current shoe of this User
+      * @param None
+      * @return A Shoes object representing the current shoe of this User
       */
      public Shoes getCurrent() {
           return current;
@@ -117,10 +108,8 @@ public class User {
 
      /*
       * setCurrent sets the User's current Shoes to the passed in Shoes object
-      * Parameters:
-      * Shoes Current: The Shoes to change this.current to.
-      * Returns:
-      * No Returns
+      * @param Current: The Shoes to change this.current to.
+      * @return No Returns
       */
      public void setCurrent(Shoes current) {
           this.current = current;
@@ -128,10 +117,8 @@ public class User {
 
      /*
       * getCart returns the cart of this User
-      * Parameters:
-      * None
-      * Returns:
-      * An ArrayList of shoes that represents the cart of this User.
+      * @param None
+      * @return An ArrayList of shoes that represents the cart of this User.
       */
      public ArrayList<Shoes> getCart() {
           return cart;
@@ -139,22 +126,17 @@ public class User {
 
      /*
       * setCart sets the User's cart to the passed in ArrayList
-      * Parameters:
-      * ArrayList<Shoes> cart: The ArrayList to set the inventory to.
-      * Returns:
-      * No Returns
+      * @param cart: The ArrayList to set the inventory to.
+      * @return No Returns
       */
      public void setCart(ArrayList<Shoes> cart) {
           this.cart = cart;
      }
 
      /*
-      * addToCart will take in a Shoes object and will add that Shoes to the User's
-      * cart.
-      * Parameters:
-      * Shoes toAdd: The shoes to be added to the cart
-      * Returns:
-      * No Returns
+      * addToCart will take in a Shoes object and will add that Shoes to the User's cart.
+      * @param toAdd: The shoes to be added to the cart
+      * @return No Returns
       */
      public void addToCart(Shoes toAdd) {
           // If the stock is less than or equal to 0 than is should return and not run
@@ -186,10 +168,8 @@ public class User {
 
      /*
       * addToInventory will add the given shoe to the User's inventory
-      * Parameters:
-      * Shoes toAdd: The shoes to add to the user's inventory
-      * Returns:
-      * No Returns
+      * @param toAdd: The shoes to add to the user's inventory
+      * @return No Returns
       */
      public void addToInventory(Shoes toAdd) {
           // If inventory is empty add the shoe immediately and return.
@@ -211,10 +191,8 @@ public class User {
 
      /*
       * toString will return a string representation of the User class
-      * Parameters:
-      * None
-      * Returns:
-      * A String representing the User class with its variables.
+      * @param None
+      * @return A String representing the User class with its variables.
       */
      @Override
      public String toString() {
