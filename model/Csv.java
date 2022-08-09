@@ -128,7 +128,7 @@ public class Csv {
             System.out.println("Shoe to check-in data CSV not found!");
         }
         // write the inventory file again
-        try (BufferedWriter inventoryWriter = new BufferedWriter(new FileWriter("data/shoes.csv", true))) {
+        try (BufferedWriter inventoryWriter = new BufferedWriter(new FileWriter("src/shoes.csv", true))) {
             inventoryWriter.append(newLine + toCSVString(selectedShoes));
             inventoryWriter.close();
         } catch (IOException e) {
