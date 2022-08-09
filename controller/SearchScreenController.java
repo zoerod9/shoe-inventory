@@ -17,6 +17,16 @@ import model.Csv;
 import model.Shoes;
 import model.User;
 
+/**
+ * SearchScreenController is the controller class for the search screen and contains all the necessary methods
+ * for the search screen to run and be able to perform its functions and switch to other screens. This class
+ * will also be able to search for shoes from the inventory.
+ * 
+ * @authors Zoe Rodriguez (vcd011), Enrique Mata (rre165), William El Haber (csn639)
+ * UTSA CS 3443 - shoe-inventory Team Project
+ * Summer 2022
+ */
+
 public class SearchScreenController {
 
     // This is the user object that will keep track of the shoes from class to class
@@ -35,14 +45,11 @@ public class SearchScreenController {
 
     /*
      * updateUser takes in a User object and creates a new object with that user's
-     * information
-     * essentially passing the information from one user to anther and one class to
+     * information essentially passing the information from one user to anther and one class to
      * another
-     * Parameters:
-     * User user: The User who is currently using this program and will be moved to
+     * @param user: The User who is currently using this program and will be moved to
      * the new screen
-     * Returns:
-     * No returns but curUser is updated with values from user
+     * @return No returns but curUser is updated with values from user
      */
     public void updateUser(User user) {
         curUser = new User("", "");
@@ -53,16 +60,11 @@ public class SearchScreenController {
 
     /*
      * navigateToItemDetailScreen will switch the scene to the item details screen
-     * when the user presses on
-     * the shoes they want to view from the search.
-     * Parameters:
-     * MouseEvent action: The action that occurred which lets the program know that
-     * the user wants to
-     * view more details about the searched shoe.
-     * Returns:
-     * No return but will update what shoes were selected and will set the current
-     * shoe of user
-     * to the selected shoe update information and then switch scenes.
+     * when the user presses on the shoes they want to view from the search.
+     * @param action: The action that occurred which lets the program know that
+     * the user wants to view more details about the searched shoe.
+     * @return No return but will update what shoes were selected and will set the current
+     * shoe of user to the selected shoe update information and then switch scenes.
      */
     public void navigateToItemDetailScreen(MouseEvent action) throws IOException {
         int selected = results.getSelectionModel().getSelectedIndex();
@@ -82,16 +84,11 @@ public class SearchScreenController {
 
     /*
      * search will search the inventory of shoes using the information provided by
-     * the users to
-     * attempt to find any matches. If found they will display to the screen and can
-     * be selected to
-     * view more details.
-     * Parameters:
-     * ActionEvent action: This lets the program know that the user wishes to search
-     * with the information
-     * they have typed in the search bar.
-     * Returns:
-     * No returns but updates the screen with the shoes that were found to match the
+     * the users to attempt to find any matches. If found they will display to the screen and can
+     * be selected to view more details.
+     * @param action: This lets the program know that the user wishes to search
+     * with the information they have typed in the search bar.
+     * @return No returns but updates the screen with the shoes that were found to match the
      * input.
      */
     public void search(ActionEvent action) throws IOException {
@@ -135,14 +132,10 @@ public class SearchScreenController {
     /*
      * goHome will switch the scene to the home screen when the user presses on the
      * proper button.
-     * Parameters:
-     * ActionEvent event: The event that occurred which lets the program know that
-     * the user wants to
-     * change to the home screen.
-     * Returns:
-     * No return but will update the curUser of the new class with this curUser and
-     * will update
-     * information on that screen then will change to that screen.
+     * @param event: The event that occurred which lets the program know that
+     * the user wants to change to the home screen.
+     * @returns No return but will update the curUser of the new class with this curUser and
+     * will update information on that screen then will change to that screen.
      */
     public void goHome(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader();
@@ -160,16 +153,11 @@ public class SearchScreenController {
 
     /*
      * goToCart will switch the scene to the order screen when the user presses on
-     * the
-     * proper button.
-     * Parameters:
-     * ActionEvent event: The event that occurred which lets the program know that
-     * the user wants to
-     * change to the order screen.
-     * Returns:
-     * No return but will update the curUser of the new class with this curUser and
-     * will update
-     * information on that screen then will change to that screen.
+     * the proper button.
+     * @param event: The event that occurred which lets the program know that
+     * the user wants to change to the order screen.
+     * @return No return but will update the curUser of the new class with this curUser and
+     * will update information on that screen then will change to that screen.
      */
     public void goToCart(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader();
@@ -185,16 +173,11 @@ public class SearchScreenController {
 
     /*
      * goToProfile will switch the scene to the profile screen when the user presses
-     * on the
-     * proper button.
-     * Parameters:
-     * ActionEvent event: The event that occurred which lets the program know that
-     * the user wants to
-     * change to the profile screen.
-     * Returns:
-     * No return but will update the curUser of the new class with this curUser and
-     * will update
-     * information on that screen then will change to that screen.
+     * on the proper button.
+     * @param event: The event that occurred which lets the program know that
+     * the user wants to change to the profile screen.
+     * @return No return but will update the curUser of the new class with this curUser and
+     * will update information on that screen then will change to that screen.
      */
     public void goToProfile(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader();
@@ -207,4 +190,4 @@ public class SearchScreenController {
         stage.setScene(scene);
         stage.show();
     }
-}
+} 

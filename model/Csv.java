@@ -9,6 +9,16 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ * Csv is a class that contains information for a Csv object that contains methods to read and write from
+ * the data shoes csv and data shoes to check in csv. These will then be used by other classes to get
+ * the information from the data.
+ * 
+ * @authors Zoe Rodriguez (), Enrique Mata (rre165), William El Haber (csn639)
+ * UTSA CS 3443 - shoe-inventory Team Project
+ * Summer 2022  
+ */
+
 public class Csv {
 
     private final static String comma = ",";
@@ -17,10 +27,8 @@ public class Csv {
     /*
      * getShoesFromCSV will read in shoes from the specific data file and will then
      * put them in an ArrayList of shoes and return that ArrayList
-     * Parameters:
-     * None but data/shoes.csv must exist
-     * Returns:
-     * An ArrayList of Shoes that are taken from the CSV file.
+     * @param None but data/shoes.csv must exist
+     * @return An ArrayList of Shoes that are taken from the CSV file.
      */
     public static ArrayList<Shoes> getShoesFromCsv() throws FileNotFoundException {
         ArrayList<Shoes> shoes = new ArrayList<>();
@@ -44,13 +52,9 @@ public class Csv {
 
     /*
      * getShoesToCheckInFromCSV will read in shoes from the specific data file and
-     * will then
-     * put them in an ArrayList of shoes and return that ArrayList of shoes to
-     * checkIn
-     * Parameters:
-     * None but data/shoesToCheckIn.csv must exist
-     * Returns:
-     * An ArrayList of Shoes that are taken from the CSV file that need to be
+     * will then put them in an ArrayList of shoes and return that ArrayList of shoes to checkIn
+     * @param None but data/shoesToCheckIn.csv must exist
+     * @return An ArrayList of Shoes that are taken from the CSV file that need to be
      * checked in still.
      */
     public static ArrayList<Shoes> getShoesToCheckInFromCsv() throws FileNotFoundException {
@@ -73,6 +77,11 @@ public class Csv {
         return shoes;
     }
 
+    /*
+     * toCSVString will take in the selectedshoes and convert it to the proper csv string
+     * @param selectedShoes the shoes to be converted to a csv string representation
+     * @return A string representation of the Shoes object passed in in a csv format
+     */
     public static String toCSVString(Shoes selectedShoes) {
         return selectedShoes.getSize() + comma + selectedShoes.getPrice() + comma
                 + selectedShoes.getBarcode() + comma + selectedShoes.getColor()
@@ -81,6 +90,14 @@ public class Csv {
                 + newLine;
     }
 
+    /*
+     * checkInShoes will take in the selectedShoes and write that shoe to the inventory csv file from 
+     * the shoes that need to be checked in and this method updates both csv files and will update the
+     * internal lists as well.
+     * @param selectedShoes the shoes to be checked in to the inventory
+     * @return No return but the shoe is taken off the shoes that need to be checked in csv and then the
+     * shoe is added to the inventory csv file
+     */
     public static void checkInShoes(Shoes selectedShoes) {
         // all shoes to check in
         ArrayList<Shoes> allShoesToCheckIn = new ArrayList<>();

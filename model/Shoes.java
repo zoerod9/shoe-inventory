@@ -1,5 +1,14 @@
 package model;
 
+/**
+ * Shoes is a class that contains information for a Shoes object that will store the information of shoes
+ * read from the csv files. This class contains all needed methods for a Shoe to be properly stored.
+ * 
+ * @authors Zoe Rodriguez (vcd011), Enrique Mata (rre165), William El Haber (csn639)
+ * UTSA CS 3443 - shoe-inventory Team Project
+ * Summer 2022
+ */
+
 public class Shoes {
      // Variables that will hold the information about the shoes
      private String size;
@@ -12,18 +21,15 @@ public class Shoes {
 
      /*
       * Shoes constructor method with an imageURL included this will set all the
-      * variables to the passed in
-      * values.
-      * Parameters:
-      * String size: shoe size of the shoe
-      * String price: price of the shoe
-      * String barcode: barcode of the shoe
-      * String color: color of the shoe
-      * String model: model of the shoe
-      * int stock: stock of the shoe
-      * String imageURL: imageURL of the shoe
-      * Returns:
-      * No return is constructor
+      * variables to the passed in values.
+      * @param size: shoe size of the shoe
+      * @param price: price of the shoe
+      * @param barcode: barcode of the shoe
+      * @param color: color of the shoe
+      * @param model: model of the shoe
+      * @param stock: stock of the shoe
+      * @param imageURL: imageURL of the shoe
+      * @return No return is constructor
       */
      public Shoes(String size, String price, String barcode, String color, String model, int stock, String imageURL) {
           this.size = size;
@@ -37,17 +43,14 @@ public class Shoes {
 
      /*
       * Shoes constructor method without an imageURL included this will set all the
-      * variables to the passed in
-      * values.
-      * Parameters:
-      * String size: shoe size of the shoe
-      * String price: price of the shoe
-      * String barcode: barcode of the shoe
-      * String color: color of the shoe
-      * String model: model of the shoe
-      * int stock: stock of the shoe
-      * Returns:
-      * No return is constructor
+      * variables to the passed in values.
+      * @param size: shoe size of the shoe
+      * @param price: price of the shoe
+      * @param barcode: barcode of the shoe
+      * @param color: color of the shoe
+      * @param model: model of the shoe
+      * @param stock: stock of the shoe
+      * @return No return is constructor
       */
      public Shoes(String size, String price, String barcode, String color, String model, int stock) {
           this.size = size;
@@ -61,10 +64,8 @@ public class Shoes {
 
      /*
       * Shoes copy constructor with a passed in shoe
-      * Parameters:
-      * Shoes temp: The shoe who's values are used to fill this new Shoes
-      * Returns:
-      * No return is constructor
+      * @param temp: The shoe who's values are used to fill this new Shoes
+      * @return No return is constructor
       */
      public Shoes(Shoes temp) {
           this.size = temp.size;
@@ -78,10 +79,8 @@ public class Shoes {
 
      /*
       * getSize will return the size of this shoe.
-      * Parameters:
-      * None
-      * Returns:
-      * A String representing the size of the shoe.
+      * @param None
+      * @return A String representing the size of the shoe.
       */
      public String getSize() {
           return size;
@@ -89,10 +88,8 @@ public class Shoes {
 
      /*
       * setSize will update the size of this shoe with the given size.
-      * Parameters:
-      * String size: The size that the size of this shoe will be updated to.
-      * Returns:
-      * No returns
+      * @param size: The size that the size of this shoe will be updated to.
+      * @return No returns
       */
      public void setSize(String size) {
           this.size = size;
@@ -100,10 +97,8 @@ public class Shoes {
 
      /*
       * getPrice will return the price of this shoe.
-      * Parameters:
-      * None
-      * Returns:
-      * A String representing the price of the shoe.
+      * @param None
+      * @return A String representing the price of the shoe.
       */
      public String getPrice() {
           return price;
@@ -111,10 +106,8 @@ public class Shoes {
 
      /*
       * setPrice will update the price of this shoe with the given price.
-      * Parameters:
-      * String price: The price that the price of this shoe will be updated to.
-      * Returns:
-      * No returns
+      * @param price: The price that the price of this shoe will be updated to.
+      * @return No returns
       */
      public void setPrice(String price) {
           this.price = price;
@@ -122,10 +115,8 @@ public class Shoes {
 
      /*
       * getBarcode will return the barcode of this shoe.
-      * Parameters:
-      * None
-      * Returns:
-      * A String representing the barcode of the shoe.
+      * @param None
+      * @return A String representing the barcode of the shoe.
       */
      public String getBarcode() {
           return barcode;
@@ -133,10 +124,8 @@ public class Shoes {
 
      /*
       * setBarcode will update the barcode of this shoe with the given barcode.
-      * Parameters:
-      * String barcode: The barcode that the barcode of this shoe will be updated to.
-      * Returns:
-      * No returns
+      * @param barcode: The barcode that the barcode of this shoe will be updated to.
+      * @return No returns
       */
      public void setBarcode(String barcode) {
           this.barcode = barcode;
@@ -144,10 +133,8 @@ public class Shoes {
 
      /*
       * getColor will return the color of this shoe.
-      * Parameters:
-      * None
-      * Returns:
-      * A String representing the color of the shoe.
+      * @param None
+      * @return A String representing the color of the shoe.
       */
      public String getColor() {
           return color;
@@ -155,10 +142,8 @@ public class Shoes {
 
      /*
       * setColor will update the color of this shoe with the given color.
-      * Parameters:
-      * String color: The color that the color of this shoe will be updated to.
-      * Returns:
-      * No returns
+      * @param color: The color that the color of this shoe will be updated to.
+      * @return No returns
       */
      public void setColor(String color) {
           this.color = color;
@@ -166,10 +151,8 @@ public class Shoes {
 
      /*
       * getModel will return the model of this shoe.
-      * Parameters:
-      * None
-      * Returns:
-      * A String representing the model of the shoe.
+      * @param None
+      * @return A String representing the model of the shoe.
       */
      public String getModel() {
           return model;
@@ -177,10 +160,8 @@ public class Shoes {
 
      /*
       * setModel will update the model of this shoe with the given model.
-      * Parameters:
-      * String model: The model that the model of this shoe will be updated to.
-      * Returns:
-      * No returns
+      * @param model: The model that the model of this shoe will be updated to.
+      * @return No returns
       */
      public void setModel(String model) {
           this.model = model;
@@ -188,10 +169,8 @@ public class Shoes {
 
      /*
       * getStock will return the stock of this shoe.
-      * Parameters:
-      * None
-      * Returns:
-      * An int representing the stock of the shoe.
+      * @param None
+      * @return An int representing the stock of the shoe.
       */
      public int getStock() {
           return stock;
@@ -199,10 +178,8 @@ public class Shoes {
 
      /*
       * setStock will update the stock of this shoe with the given stock.
-      * Parameters:
-      * int stock: The stock that the stock of this shoe will be updated to.
-      * Returns:
-      * No returns
+      * @param stock: The stock that the stock of this shoe will be updated to.
+      * @return No returns
       */
      public void setStock(int stock) {
           this.stock = stock;
@@ -210,10 +187,8 @@ public class Shoes {
 
      /*
       * getImageURL will return the imageURL of this shoe.
-      * Parameters:
-      * None
-      * Returns:
-      * A String representing the imageURL of the shoe.
+      * @param None 
+      * @return A String representing the imageURL of the shoe.
       */
      public String getImageURL() {
           return imageURL;
@@ -221,11 +196,8 @@ public class Shoes {
 
      /*
       * setImageURL will update the imageURL of this shoe with the given imageURL.
-      * Parameters:
-      * String imageURL: The imageURL that the imageURL of this shoe will be updated
-      * to.
-      * Returns:
-      * No returns
+      * @param imageURL: The imageURL that the imageURL of this shoe will be updated to.
+      * @return No returns
       */
      public void setImageURL(String imageURL) {
           this.imageURL = imageURL;
@@ -233,10 +205,8 @@ public class Shoes {
 
      /*
       * toString will return a string representation of the Shoes class
-      * Parameters:
-      * None
-      * Returns:
-      * A String representing the Shoes class with its variables.
+      * @param None
+      * @return A String representing the Shoes class with its variables.
       */
      @Override
      public String toString() {
@@ -245,12 +215,9 @@ public class Shoes {
      }
 
      /*
-      * equals will return a boolean representing if the given object is equal to
-      * this object
-      * Parameters:
-      * Object obj
-      * Returns:
-      * true if they are equal
+      * equals will return a boolean representing if the given object is equal to this object
+      * @param obj the object to compare too
+      * @return true if they are equal false if they are not
       */
      @Override
      public boolean equals(Object obj) {
