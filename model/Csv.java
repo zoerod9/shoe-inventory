@@ -32,7 +32,8 @@ public class Csv {
      */
     public static ArrayList<Shoes> getShoesFromCsv() throws FileNotFoundException {
         ArrayList<Shoes> shoes = new ArrayList<>();
-        File file = new File("src/shoes.csv");
+        InputStream inpS = Csv.class.getResourceAsStream("/data/shoes.csv");
+        File file = new File(new InputStream(inpS));
         Scanner scan = new Scanner(file);
         while (scan.hasNext()) {
             String line = scan.next();
@@ -59,7 +60,8 @@ public class Csv {
      */
     public static ArrayList<Shoes> getShoesToCheckInFromCsv() throws FileNotFoundException {
         ArrayList<Shoes> shoes = new ArrayList<>();
-        File file = new File("src/shoesToCheckIn.csv");
+        InputStream inpS = Csv.class.getResourceAsStream("/data/shoesToCheckIn.csv");
+        File file = new File(new InputStream(inpS));
         Scanner scan = new Scanner(file);
         while (scan.hasNext()) {
             String line = scan.next();
@@ -116,8 +118,9 @@ public class Csv {
                 shoesToKeepInCheckin.add(toCSVString(shoes));
             }
         }
-
-        try (PrintWriter checkInWriter = new PrintWriter("src/shoesToCheckIn.csv")) {
+        
+        InputStream inpS = Csv.class.getResourceAsStream("/data/shoesToCheckIn.csv");
+        try (PrintWriter checkInWriter = new PrintWriter(new InputStream(inpS))) {
             checkInWriter.print("");
             // write the leftover shoes to the file
             for (String string : shoesToKeepInCheckin) {
@@ -128,7 +131,8 @@ public class Csv {
             System.out.println("Shoe to check-in data CSV not found!");
         }
         // write the inventory file again
-        try (BufferedWriter inventoryWriter = new BufferedWriter(new FileWriter("src/shoes.csv", true))) {
+        InputStream inpS = Csv.class.getResourceAsStream("/data/shoes.csv");
+        try (BufferedWriter inventoryWriter = new BufferedWriter(new FileWriter(new InputStream(inpS), true))) {
             inventoryWriter.append(newLine + toCSVString(selectedShoes));
             inventoryWriter.close();
         } catch (IOException e) {
