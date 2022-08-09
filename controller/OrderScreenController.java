@@ -19,17 +19,20 @@ import model.User;
 import javafx.scene.Scene;
 
 /**
- * OrderScreenController is the controller class for the order screen and contains all the necessary methods
- * for the order screen to run and be able to perform its functions and switch to other screens. This class
- * will also be able to display information about the cart and the current order.
+ * OrderScreenController is the controller class for the order screen and
+ * contains all the necessary methods
+ * for the order screen to run and be able to perform its functions and switch
+ * to other screens. This class
+ * will also be able to display information about the cart and the current
+ * order.
  * 
- * @authors Zoe Rodriguez (vcd011), Enrique Mata (rre165), William El Haber (csn639)
- * UTSA CS 3443 - shoe-inventory Team Project 
- * Summer 2022
+ * @authors Zoe Rodriguez (vcd011), Enrique Mata (rre165), William El Haber
+ *          (csn639)
+ *          UTSA CS 3443 - shoe-inventory Team Project
+ *          Summer 2022
  */
 
 public class OrderScreenController {
-
 
     private User curUser;
 
@@ -41,12 +44,19 @@ public class OrderScreenController {
 
     /*
      * updateInfo takes in a User object and creates a new object with that user's
-     * information essentially passing the information from one user to anther and one class to
-     * another. This will also update the text on the screen with the necessary information
+     * information essentially passing the information from one user to anther and
+     * one class to
+     * another. This will also update the text on the screen with the necessary
+     * information
      * from the user.
-     * @param user: The User who is currently using this program and will be moved to
-     * the new screen and who's information will be used to fill the text on the screen.
-     * @return No returns but curUser is updated with values from user and the text on
+     * 
+     * @param user: The User who is currently using this program and will be moved
+     * to
+     * the new screen and who's information will be used to fill the text on the
+     * screen.
+     * 
+     * @return No returns but curUser is updated with values from user and the text
+     * on
      * screen is updated.
      */
     public void updateUser(User user) {
@@ -73,9 +83,12 @@ public class OrderScreenController {
     /*
      * switchToSearchScreen will switch the scene to the search screen when the user
      * presses on the proper button.
+     * 
      * @param event: The event that occurred which lets the program know that
      * the user wants to change to the search screen.
-     * @return No return but will update the curUser of the new class with this curUser and
+     * 
+     * @return No return but will update the curUser of the new class with this
+     * curUser and
      * will update information on that screen then will change to that screen.
      */
     public void switchToSearchScreen(ActionEvent event) throws IOException {
@@ -93,9 +106,12 @@ public class OrderScreenController {
     /*
      * goHome will switch the scene to the home screen when the user presses on the
      * proper button.
+     * 
      * @param event: The event that occurred which lets the program know that
      * the user wants to change to the home screen.
-     * @return No return but will update the curUser of the new class with this curUser and
+     * 
+     * @return No return but will update the curUser of the new class with this
+     * curUser and
      * will update information on that screen then will change to that screen.
      */
     public void goHome(ActionEvent event) throws IOException {
@@ -115,9 +131,12 @@ public class OrderScreenController {
     /*
      * goToProfile will switch the scene to the profile screen when the user presses
      * on the proper button.
+     * 
      * @param event: The event that occurred which lets the program know that
      * the user wants to change to the profile screen.
-     * @return No return but will update the curUser of the new class with this curUser and
+     * 
+     * @return No return but will update the curUser of the new class with this
+     * curUser and
      * will update information on that screen then will change to that screen.
      */
     public void goToProfile(ActionEvent event) throws IOException {
@@ -131,13 +150,15 @@ public class OrderScreenController {
         stage.setScene(scene);
         stage.show();
     }
-    
 
-    /* 
+    /*
      * placeOrder will update the stock in the csv file and will place the order.
+     * 
      * @param event: The event that occurred which lets the program know that
      * the user wants to place the order of the current cart.
-     * @return No return but will update the csv file and the stock and will place the order
+     * 
+     * @return No return but will update the csv file and the stock and will place
+     * the order
      * in the cart.
      */
     public void placeOrder(ActionEvent event) {

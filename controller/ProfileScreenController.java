@@ -18,13 +18,16 @@ import model.Shoes;
 import model.User;
 
 /**
- * ProfileScreenController is the controller class for the profile screen and contains all the necessary methods
- * for the order screen to run and be able to perform its functions and switch to other screens. This class
+ * ProfileScreenController is the controller class for the profile screen and
+ * contains all the necessary methods
+ * for the order screen to run and be able to perform its functions and switch
+ * to other screens. This class
  * will also be able to display information about the cart and the inventory.
  * 
- * @authors Zoe Rodriguez (vcd011), Enrique Mata (rre165), William El Haber (csn639)
- * UTSA CS 3443 - shoe-inventory Team Project
- * Summer 2022
+ * @authors Zoe Rodriguez (vcd011), Enrique Mata (rre165), William El Haber
+ *          (csn639)
+ *          UTSA CS 3443 - shoe-inventory Team Project
+ *          Summer 2022
  */
 
 public class ProfileScreenController {
@@ -45,12 +48,19 @@ public class ProfileScreenController {
 
     /*
      * updateInfo takes in a User object and creates a new object with that user's
-     * information essentially passing the information from one user to anther and one class to
-     * another. This will also update the text on the screen with the necessary information
+     * information essentially passing the information from one user to anther and
+     * one class to
+     * another. This will also update the text on the screen with the necessary
+     * information
      * from the user.
-     * @param user: The User who is currently using this program and will be moved to
-     * the new screen and who's information will be used to fill the text on the screen.
-     * @return No returns but curUser is updated with values from user and the text on
+     * 
+     * @param user: The User who is currently using this program and will be moved
+     * to
+     * the new screen and who's information will be used to fill the text on the
+     * screen.
+     * 
+     * @return No returns but curUser is updated with values from user and the text
+     * on
      * screen is updated.
      */
     public void updateInfo(User user) throws FileNotFoundException {
@@ -86,9 +96,12 @@ public class ProfileScreenController {
     /*
      * goToCart will switch the scene to the order screen when the user presses on
      * the proper button.
+     * 
      * @param event: The event that occurred which lets the program know that
      * the user wants to change to the order screen.
-     * @return No return but will update the curUser of the new class with this curUser and
+     * 
+     * @return No return but will update the curUser of the new class with this
+     * curUser and
      * will update information on that screen then will change to that screen.
      */
     public void goToCart(ActionEvent event) throws IOException {
@@ -106,9 +119,12 @@ public class ProfileScreenController {
     /*
      * goHome will switch the scene to the home screen when the user presses on the
      * proper button.
+     * 
      * @param event: The event that occurred which lets the program know that
      * the user wants to change to the home screen.
-     * @return No return but will update the curUser of the new class with this curUser and
+     * 
+     * @return No return but will update the curUser of the new class with this
+     * curUser and
      * will update information on that screen then will change to that screen.
      */
     public void goHome(ActionEvent event) throws IOException {
@@ -124,4 +140,4 @@ public class ProfileScreenController {
         stage.setScene(scene);
         stage.show();
     }
-} 
+}

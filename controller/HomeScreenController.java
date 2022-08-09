@@ -17,13 +17,17 @@ import model.Shoes;
 import model.User;
 
 /**
- * HomeScreenController is the controller class for the home screen and contains all the necessary methods
- * for the home screen to run and be able to perform its functions and switch to other screens. This 
- * class also initializes most of the variables that will be used throughout the rest of the program.
+ * HomeScreenController is the controller class for the home screen and contains
+ * all the necessary methods
+ * for the home screen to run and be able to perform its functions and switch to
+ * other screens. This
+ * class also initializes most of the variables that will be used throughout the
+ * rest of the program.
  * 
- * @authors Zoe Rodriguez (vcd011), Enrique Mata (rre165), William El Haber (csn639)
- * UTSA CS 3443 - shoe-inventory Team Project 
- * Summer 2022
+ * @authors Zoe Rodriguez (vcd011), Enrique Mata (rre165), William El Haber
+ *          (csn639)
+ *          UTSA CS 3443 - shoe-inventory Team Project
+ *          Summer 2022
  */
 
 public class HomeScreenController {
@@ -39,10 +43,13 @@ public class HomeScreenController {
 
     /*
      * updateUser takes in a User object and creates a new object with that user's
-     * information essentially passing the information from one user to anther and one class to
+     * information essentially passing the information from one user to anther and
+     * one class to
      * another
+     * 
      * @param user The User who is currently using this program and will be moved to
      * the new screen
+     * 
      * @return No returns but curUser is updated with values from user
      */
     public void updateUser(User user) {
@@ -55,7 +62,9 @@ public class HomeScreenController {
     /*
      * Initializes toCheckIn to allow it to be utilized and for shoes to be properly
      * added.
+     * 
      * @param No parameters
+     * 
      * @return No returns
      */
     public void initialize() {
@@ -65,9 +74,12 @@ public class HomeScreenController {
     /*
      * addToInventory runs when a shoe is selected from the incoming inventory to be
      * added to the current inventory and the check in button is selected.
+     * 
      * @param event: The event that occurred which lets the program know that
      * the user wants to check in shoes.
-     * @ return No return but will update the Inventory with the newly checked in shoes.
+     * 
+     * @return No return but will update the Inventory with the newly checked in
+     * shoes.
      */
     public void addToInventory(ActionEvent event) throws IOException {
         ObservableList<Integer> selectedIndices = toCheckIn.getSelectionModel().getSelectedIndices();
@@ -90,9 +102,12 @@ public class HomeScreenController {
     /*
      * switchToOrderScreen will switch the scene to the order screen when the user
      * presses on the proper button.
+     * 
      * @param event: The event that occurred which lets the program know that
      * the user wants to change to the order screen.
-     * @return No return but will update the curUser of the new class with this curUser and
+     * 
+     * @return No return but will update the curUser of the new class with this
+     * curUser and
      * will update information on that screen then will change to that screen.
      */
     public void switchToOrderScreen(ActionEvent event) throws IOException {
@@ -110,9 +125,12 @@ public class HomeScreenController {
     /*
      * switchToSearchScreen will switch the scene to the search screen when the user
      * presses on the proper button.
+     * 
      * @param event: The event that occurred which lets the program know that
      * the user wants to change to the search screen.
-     * @return No return but will update the curUser of the new class with this curUser and
+     * 
+     * @return No return but will update the curUser of the new class with this
+     * curUser and
      * will update information on that screen then will change to that screen.
      */
     public void switchToSearchScreen(ActionEvent event) throws IOException {
@@ -130,9 +148,12 @@ public class HomeScreenController {
     /*
      * goToProfile will switch the scene to the profile screen when the user presses
      * on the proper button.
+     * 
      * @param event: The event that occurred which lets the program know that
      * the user wants to change to the profile screen.
-     * @return No return but will update the curUser of the new class with this curUser and
+     * 
+     * @return No return but will update the curUser of the new class with this
+     * curUser and
      * will update information on that screen then will change to that screen.
      */
     public void goToProfile(ActionEvent event) throws IOException {
@@ -153,8 +174,11 @@ public class HomeScreenController {
      * array. It will then add the shoes that are in uncheckedShoes by their model
      * to the List on the
      * screen.
+     * 
      * @param uncheckedShoes: An ArrayList of shoes that will be added to
-     * the List on the screen and displayed so the User can select which shoes should be added.
+     * the List on the screen and displayed so the User can select which shoes
+     * should be added.
+     * 
      * @return No return but will update the screen with the information passed in.
      */
     public void setToCheckIn(ArrayList<Shoes> uncheckedShoes) {

@@ -14,8 +14,28 @@ to keep track of shoes in their inventory and incoming arrivals and place orders
 The user should ensure they have a data folder containing two csv files, one named shoes.csv with the shoes already
 in the inventory, and then another named shoesToCheckIn.csv that will contain the shoes that are still waiting
 to be added to the inventory properly. If the user wishes to properly display images as well then the csv should
-contain a proper URL to the shoe image. Also the user should ensure that the csv file they are using contains proper
+contain a proper location to the shoe image. Also, the user should ensure that the csv file they are using contains proper
 input especially for stock which should only be an integer.
+
+# How To Clone This Project:
+run the following commands in an instance of a terminal:
+
+```sh
+git clone https://github.com/zoerod9/shoe-inventory.git
+
+cd shoe-inventory
+
+# you are now in the project directory, happy coding!
+```
+
+# How To Run This Project:
+1. Make sure that you are using JDK 8
+1. Open the project in eclipse
+1. Click on the run menu
+1. Select "Run"
+1. A new window should open up with the inial view of the application
+
+
 # Credits:
 TEAM LEAD: Zoe Rodriguez - zoerod09
 
