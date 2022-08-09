@@ -11,7 +11,7 @@ screen that will allow the user to search their inventory for a specific shoe or
 then view details about that specific shoe. The hope is that the program will allow for companies and individuals
 to keep track of shoes in their inventory and incoming arrivals and place orders based on customers.
 # How To Ensure Properly Installed:
-The user should ensure they have a data folder containing two csv files, one named shoes.csv with the shoes already
+The user should ensure they have two csv files, one named shoes.csv with the shoes already
 in the inventory, and then another named shoesToCheckIn.csv that will contain the shoes that are still waiting
 to be added to the inventory properly. If the user wishes to properly display images as well then the csv should
 contain a proper location to the shoe image. Also, the user should ensure that the csv file they are using contains proper
