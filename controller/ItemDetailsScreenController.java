@@ -89,10 +89,10 @@ public class ItemDetailsScreenController {
         // found.
         Image image;
         try {
-            image = new Image(new FileInputStream(curUser.getCurrent().getImageURL()));
+            image = new Image(new FileInputStream("images/"+ curUser.getCurrent().getImageURL()));
             shoeImage.setImage(image);
         } catch (FileNotFoundException e) {
-            System.out.println("ERROR FINDING SHOE IMAGE");
+            System.out.println(e);
         }
         // If the stock is less than or equal to 0 than the add to order button is
         // hidden since it should

@@ -28,7 +28,7 @@
                   </Button>
                </children>
             </HBox>
-            <ListView fx:id="toCheckIn" layoutX="25.0" layoutY="177.0" prefHeight="200.0" prefWidth="536.0" />
+            <ListView fx:id="toCheckIn" fixedCellSize="55.0" layoutX="25.0" layoutY="177.0" prefHeight="200.0" prefWidth="536.0" />
             <ButtonBar layoutX="-3.0" prefHeight="60.0" prefWidth="587.0" style="-fx-background-color: blue;">
                <buttons>
                   <Button alignment="CENTER" mnemonicParsing="false" onAction="#goToProfile" text="Profile" translateX="-427.0" translateY="-15.0" />
