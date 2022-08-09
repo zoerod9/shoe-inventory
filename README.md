@@ -35,6 +35,10 @@ cd shoe-inventory
 1. Select "Run"
 1. A new window should open up with the inial view of the application
 
+# Demo Video
+[Click here to see demo video in YouTube](https://youtu.be/lrZIAm7N6GY)
+
+[Click here to see demo video in Google Drive](https://drive.google.com/file/d/1FToG8_JZXDSjeYMGCcZ9K8WXxylloXal/view?usp=sharing)
 
 # Credits:
 TEAM LEAD: Zoe Rodriguez - zoerod09
