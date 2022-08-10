@@ -38,7 +38,7 @@ cd shoe-inventory
 1. Open the project in eclipse
 1. Click on the run menu
 1. Select "Run"
-1. A new window should open up with the inial view of the application
+1. A new window should open up with the inital view of the application
 
 # Demo Video
 [Click here to see demo video in YouTube](https://youtu.be/lrZIAm7N6GY)
