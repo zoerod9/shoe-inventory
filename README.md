@@ -12,6 +12,10 @@ then view details about that specific shoe. The hope is that the program will al
 to keep track of shoes in their inventory and incoming arrivals and place orders based on customers.
 # How To Ensure Properly Installed:
 The user should ensure their classpaths have been updated so javafx can properly run and display all screens.
+If you have java downloaded you should already have the classpaths needed simply right click on the shoe-inventory
+in the package explorer and navigate to properties and Java build path. In this area select classpath and then 
+add external jars. Then navigate to where you have downloaded java and locate the javafx classes and select them
+all add them to the classpath. Then click apply and then apply and close once completed.
 The user should ensure they have two csv files, one named shoes.csv with the shoes already
 in the inventory, and then another named shoesToCheckIn.csv that will contain the shoes that are still waiting
 to be added to the inventory properly. If the user wishes to properly display images as well then the csv should
